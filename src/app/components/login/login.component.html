@@ -1,0 +1,46 @@
+<div class="container-login">
+    <div class="login">
+
+        <mat-spinner *ngIf="loading" class="spinner" diameter="60"></mat-spinner>
+
+        <form *ngIf="!loading" [formGroup]="Form" (ngSubmit)="login()">
+            <img class="img-login" src="./assets/img/user.png" alt="login-img">
+            <h1 class="title">My Account</h1>
+            
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input 
+                    type="text"
+                    matInput 
+                    autocomplete="off"
+                    formControlName="user">
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input 
+                    [type]="hide ? 'password' : 'text'"
+                    matInput
+                    autocomplete="off"
+                    formControlName="password">
+                <button 
+                    type="button"
+                    mat-icon-button matSuffix 
+                    (click)="hide = !hide" 
+                    [attr.aria-label]="'Hide password'" 
+                    [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <br>
+            <button 
+                type="submit" 
+                class="form-field button" 
+                mat-raised-button color="primary" 
+                [disabled]="Form.invalid">
+                Ingresar
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.button{
+  height: 50px;
+}
+
+.container-login{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.form-field{
+  width: 80%;
+}
+
+.img-login{
+  width: 50%;
+}
+
+.login{
+  width: 100%;
+  max-width: 330px;
+  text-align: center;
+}
+
+.spinner{
+  margin: 0 auto;
+}
+
+.title{
+color: var(--primary-color)
+}

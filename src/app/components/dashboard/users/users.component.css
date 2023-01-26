@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+    margin: 5px 0 0;
+}
+
+th{
+    width: 20%;
+}
+
+.icons{
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+.icon-search{
+    color: #00a2ff;
+}
+
+.icon-edit{
+    color: #2380ba;
+}
+
+.icon-delete{
+    color: #eb310c;
+}
+
+.icons-column{
+    text-align: right;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    margin: 15px 0 0;
+}
